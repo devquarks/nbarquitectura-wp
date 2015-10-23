@@ -1,0 +1,171 @@
+@dark-text-color: #333;
+
+.lab-divider {
+	width: 100%;
+	margin-left: auto;
+    margin-right: auto;
+    margin-bottom: @base-margin;
+	display: table;
+	//font-size: 18px; // nashta duhet mu hek
+	
+	.divider-line,
+	.lab-divider-content {
+	    vertical-align: middle;
+	    display: table-cell;
+	}
+	
+	.divider-line {
+	    position: relative;
+	    
+	    .double-line {
+		    display: none;
+	    }
+    
+		&.divider-left {
+			width: 50%;
+		}
+		
+		&.divider-right {
+			width: 50%;
+		}
+		
+		span {
+			height: 1px;
+		    border-top: 1px solid @dark-text-color;
+		    display: block;
+		    position: relative;
+		    top: 1px;
+		    width: 100%;
+		}
+	}
+	
+	.lab-divider-content {
+		
+		span {
+			display: block;
+			white-space: nowrap;
+			padding: 12px 25px;
+			text-align: center;
+			font-size: @font-size-base + 1;
+		}
+	}
+	
+	// Border Types
+	&.divider-type-1 {
+		
+		.lab-divider-content {
+			
+			span {
+				padding: 10px 20px;
+				border: 2px solid @dark-text-color;
+				box-shadow: 4px 4px 0 0 @lab-color;
+			}
+		}
+	}
+	
+	&.divider-type-2 {
+		
+		.lab-divider-content {
+			span {
+				padding: 12px 30px;
+			}
+		}
+		.divider-line {
+			span {
+				border-top: 2px solid @dark-text-color;
+			}			
+		}
+	}
+	
+	&.divider-type-3 {
+		.divider-line {
+			span {
+				border-top: 1px solid @dark-text-color;
+			}
+			
+			.double-line {
+				display: block;
+				border-top: 1px solid @dark-text-color;
+				top: 2px;
+			}	
+		}
+	}
+	
+	&.divider-type-4 {
+		
+		.lab-divider-content {
+			span {
+				background: @dark-text-color;
+				color: #fff;
+				padding: 12px 25px;
+				margin: 10px;
+			}
+		}
+	}
+	
+	&.divider-type-5 {
+		
+		.divider-line {
+			span {
+				background: url("../images/icons/divider-3.png");
+				background-size: 7px;
+				height: 3px;
+				border: none;
+			}
+		}		
+	}
+	
+	&.divider-type-6 {
+		.divider-line {
+			span {
+				background: url("../images/icons/divider-2.png");
+				background-size: 8px;
+				height: 8px;
+				border: none;
+			}
+		}
+	}
+	
+	&.divider-type-7 {
+		
+		.divider-line {
+			
+			span {
+				border: 0;			
+				height: 6px;
+				background: url("../images/icons/divider-1.png");
+				background-size: 10px;
+			}
+		}
+	}
+	
+	&.divider-plain {
+		margin-bottom: 40px;
+		
+		.lab-divider-content {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	
+	&.type-saw {
+		.lab-divider-content {
+			height: 6px;
+			background: url("../images/icons/divider-1.png");
+			background-size: 10px;
+			
+		}
+	}
+	
+	&.type-thin {
+		.lab-divider-content {
+			border-bottom: 2px solid @dark-text-color;
+		}
+	}
+	
+	&.type-thick {
+		.lab-divider-content {
+			border-bottom: 3px solid @dark-text-color;
+		}
+	}
+}
